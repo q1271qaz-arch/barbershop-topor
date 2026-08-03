@@ -1,0 +1,882 @@
+/* =========================================================
+   БАРБЕРШОП «ТОПОР»
+   Дополнительные анимации и декоративные эффекты
+   ========================================================= */
+
+
+/* =========================================================
+   1. ПЛАВНАЯ ЗАГРУЗКА СТРАНИЦЫ
+   ========================================================= */
+
+body {
+    animation: pageFadeIn 0.7s ease forwards;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   2. АНИМАЦИЯ ЛОГОТИПА
+   ========================================================= */
+
+.logo__image {
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+.logo:hover .logo__image {
+    filter: drop-shadow(0 0 12px rgba(184, 115, 51, 0.45));
+    transform: rotate(-6deg) scale(1.06);
+}
+
+.logo__name,
+.logo__caption {
+    transition: color 0.35s ease;
+}
+
+.logo:hover .logo__name {
+    color: var(--color-copper-light);
+}
+
+.logo:hover .logo__caption {
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   3. БЛИК НА КНОПКАХ
+   ========================================================= */
+
+.button {
+    isolation: isolate;
+}
+
+.button::after {
+    position: absolute;
+    top: -120%;
+    left: -45%;
+    z-index: -1;
+    width: 32%;
+    height: 340%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(24deg);
+    transition: left 0.65s ease;
+    content: "";
+}
+
+.button:hover::after {
+    left: 125%;
+}
+
+
+/* =========================================================
+   4. АНИМАЦИЯ МЕДНОЙ ЛИНИИ ЗАГОЛОВКОВ
+   ========================================================= */
+
+.section-label::before {
+    transform-origin: left;
+    animation: labelLinePulse 2.8s ease-in-out infinite;
+}
+
+@keyframes labelLinePulse {
+    0%,
+    100% {
+        opacity: 0.55;
+        transform: scaleX(0.65);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+
+/* =========================================================
+   5. HERO — ЛЁГКОЕ ДВИЖЕНИЕ ФОНА
+   ========================================================= */
+
+.hero__video {
+    animation: heroVideoZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes heroVideoZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
+
+.hero__texture {
+    animation: textureShift 18s linear infinite;
+}
+
+@keyframes textureShift {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 180px 120px;
+    }
+}
+
+
+/* =========================================================
+   6. HERO — МЕРЦАНИЕ МЕДНОГО ЗАГОЛОВКА
+   ========================================================= */
+
+.hero__title span,
+.section-title span,
+.promotion__title span,
+.final-cta__title span,
+.page-hero__title span {
+    background:
+        linear-gradient(
+            110deg,
+            var(--color-copper-dark) 0%,
+            var(--color-copper-light) 35%,
+            #f0bb83 50%,
+            var(--color-copper) 65%,
+            var(--color-copper-dark) 100%
+        );
+    background-size: 220% auto;
+    background-clip: text;
+    color: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: currentColor;
+    animation: copperShine 7s linear infinite;
+}
+
+@keyframes copperShine {
+    from {
+        background-position: 220% center;
+    }
+
+    to {
+        background-position: -220% center;
+    }
+}
+
+
+/* =========================================================
+   7. HERO — СЧЁТЧИКИ
+   ========================================================= */
+
+.hero-fact {
+    transition:
+        padding-left 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.hero-fact:hover {
+    padding-left: 10px;
+    border-color: rgba(184, 115, 51, 0.55);
+}
+
+.hero-fact__number {
+    transition:
+        color 0.35s ease,
+        text-shadow 0.35s ease;
+}
+
+.hero-fact:hover .hero-fact__number {
+    color: #efb37c;
+    text-shadow: 0 0 24px rgba(184, 115, 51, 0.35);
+}
+
+
+/* =========================================================
+   8. БЕГУЩАЯ СТРОКА
+   ========================================================= */
+
+.ticker:hover .ticker__track {
+    animation-play-state: paused;
+}
+
+.ticker__symbol {
+    animation: tickerSymbolRotate 4s linear infinite;
+}
+
+@keyframes tickerSymbolRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   9. КАРТОЧКИ ПРЕИМУЩЕСТВ
+   ========================================================= */
+
+.advantage-card__icon {
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-card__icon::before {
+    position: absolute;
+    inset: -50%;
+    background:
+        conic-gradient(
+            transparent,
+            rgba(184, 115, 51, 0.25),
+            transparent 30%
+        );
+    opacity: 0;
+    animation: iconBorderRotate 5s linear infinite;
+    transition: opacity 0.35s ease;
+    content: "";
+}
+
+.advantage-card:hover .advantage-card__icon::before {
+    opacity: 1;
+}
+
+.advantage-card__icon img {
+    position: relative;
+    z-index: 2;
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.advantage-card:hover .advantage-card__icon img {
+    filter: drop-shadow(0 0 8px rgba(184, 115, 51, 0.55));
+    transform: scale(1.12);
+}
+
+@keyframes iconBorderRotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   10. КАРТОЧКИ УСЛУГ
+   ========================================================= */
+
+.service-preview__content {
+    transition: transform 0.45s ease;
+}
+
+.service-preview:hover .service-preview__content {
+    transform: translateY(-8px);
+}
+
+.service-preview__number {
+    position: relative;
+    display: inline-block;
+}
+
+.service-preview__number::after {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 12px);
+    width: 0;
+    height: 1px;
+    background: var(--color-copper);
+    transition: width 0.45s ease;
+    content: "";
+}
+
+.service-preview:hover .service-preview__number::after {
+    width: 45px;
+}
+
+
+/* =========================================================
+   11. СЛАЙДЕР РАБОТ
+   ========================================================= */
+
+.work-card::after {
+    position: absolute;
+    inset: 14px;
+    border: 1px solid transparent;
+    transition:
+        border-color 0.45s ease,
+        inset 0.45s ease;
+    content: "";
+    pointer-events: none;
+}
+
+.work-card:hover::after {
+    inset: 20px;
+    border-color: rgba(184, 115, 51, 0.55);
+}
+
+.slider-button {
+    overflow: hidden;
+}
+
+.slider-button::before {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(-110%);
+    transition: transform 0.4s ease;
+    content: "";
+}
+
+.slider-button:hover::before {
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   12. АКЦИЯ МЕСЯЦА
+   ========================================================= */
+
+.promotion__image img {
+    animation: promotionImageMove 14s ease-in-out infinite alternate;
+}
+
+@keyframes promotionImageMove {
+    from {
+        transform: scale(1.02) translateX(0);
+    }
+
+    to {
+        transform: scale(1.08) translateX(-2%);
+    }
+}
+
+.promotion__badge {
+    animation: badgePulse 2.2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.34);
+    }
+
+    50% {
+        box-shadow: 0 0 0 11px rgba(184, 115, 51, 0);
+    }
+}
+
+.promotion__new-price {
+    animation: priceGlow 3s ease-in-out infinite;
+}
+
+@keyframes priceGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 0 rgba(184, 115, 51, 0);
+    }
+
+    50% {
+        text-shadow: 0 0 24px rgba(184, 115, 51, 0.28);
+    }
+}
+
+
+/* =========================================================
+   13. КАРТОЧКИ МАСТЕРОВ
+   ========================================================= */
+
+.master-preview,
+.master-card {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+.master-preview:hover,
+.master-card:hover {
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.42);
+    transform: translateY(-7px);
+}
+
+.master-preview__info,
+.master-card__content {
+    position: relative;
+    overflow: hidden;
+}
+
+.master-preview__info::before,
+.master-card__content::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 45%;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(184, 115, 51, 0.08),
+            transparent
+        );
+    transition: left 0.7s ease;
+    content: "";
+}
+
+.master-preview:hover .master-preview__info::before,
+.master-card:hover .master-card__content::before {
+    left: 130%;
+}
+
+
+/* =========================================================
+   14. ОТЗЫВЫ
+   ========================================================= */
+
+.review-card__rating {
+    animation: ratingGlow 2.8s ease-in-out infinite;
+}
+
+@keyframes ratingGlow {
+    0%,
+    100% {
+        text-shadow: 0 0 0 rgba(184, 115, 51, 0);
+    }
+
+    50% {
+        text-shadow: 0 0 15px rgba(184, 115, 51, 0.38);
+    }
+}
+
+.review-card__avatar {
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.review-card:hover .review-card__avatar {
+    background: var(--color-copper);
+    color: var(--color-black);
+    transform: rotate(-5deg) scale(1.05);
+}
+
+
+/* =========================================================
+   15. ФИНАЛЬНЫЙ CTA
+   ========================================================= */
+
+.final-cta__background {
+    animation: finalCtaZoom 16s ease-in-out infinite alternate;
+}
+
+@keyframes finalCtaZoom {
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1.11);
+    }
+}
+
+
+/* =========================================================
+   16. ССЫЛКИ ПОДВАЛА
+   ========================================================= */
+
+.footer__links a,
+.footer__contacts a {
+    position: relative;
+}
+
+.footer__links a::before {
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    margin-right: 0;
+    background: var(--color-copper);
+    vertical-align: middle;
+    transition:
+        width 0.35s ease,
+        margin-right 0.35s ease;
+    content: "";
+}
+
+.footer__links a:hover::before {
+    width: 18px;
+    margin-right: 9px;
+}
+
+
+/* =========================================================
+   17. ВНУТРЕННИЕ СТРАНИЦЫ
+   ========================================================= */
+
+.page-hero__background {
+    animation: pageHeroZoom 16s ease-in-out infinite alternate;
+}
+
+@keyframes pageHeroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+
+/* =========================================================
+   18. ФИЛЬТРЫ УСЛУГ
+   ========================================================= */
+
+.filter-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-button::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--color-copper);
+    transform: translateY(105%);
+    transition: transform 0.35s ease;
+    content: "";
+}
+
+.filter-button:hover::before,
+.filter-button.active::before {
+    transform: translateY(0);
+}
+
+.service-card {
+    animation: serviceCardShow 0.45s ease both;
+}
+
+@keyframes serviceCardShow {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   19. ТАБЛИЦА ЦЕН
+   ========================================================= */
+
+.price-table tbody tr {
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.price-table tbody tr:hover {
+    background: rgba(184, 115, 51, 0.06);
+}
+
+.price-table tbody tr:hover td:first-child {
+    color: var(--color-copper-light);
+}
+
+
+/* =========================================================
+   20. МОДАЛЬНОЕ ОКНО
+   ========================================================= */
+
+.master-modal__photo img {
+    animation: modalImageShow 0.6s ease both;
+}
+
+.master-modal__info {
+    animation: modalInfoShow 0.6s 0.1s ease both;
+}
+
+@keyframes modalImageShow {
+    from {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalInfoShow {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.master-gallery img {
+    cursor: zoom-in;
+    filter: grayscale(0.45);
+    transition:
+        filter 0.35s ease,
+        transform 0.35s ease;
+}
+
+.master-gallery img:hover {
+    z-index: 2;
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   21. ФОРМА ЗАПИСИ
+   ========================================================= */
+
+.form-control:hover {
+    border-color: rgba(184, 115, 51, 0.42);
+}
+
+.form-label {
+    transition: color 0.3s ease;
+}
+
+.form-group:focus-within .form-label {
+    color: var(--color-copper-light);
+}
+
+.form-control.error {
+    animation: inputShake 0.35s ease;
+}
+
+@keyframes inputShake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+}
+
+.form-status.success,
+.form-status.error {
+    animation: statusShow 0.4s ease both;
+}
+
+@keyframes statusShow {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   22. КАРТА
+   ========================================================= */
+
+.map-container {
+    position: relative;
+}
+
+.map-container::before {
+    position: absolute;
+    inset: 12px;
+    z-index: 2;
+    border: 1px solid rgba(184, 115, 51, 0.3);
+    content: "";
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   23. КНОПКА НАВЕРХ
+   ========================================================= */
+
+.scroll-top.visible {
+    animation: scrollTopShow 0.45s ease both;
+}
+
+@keyframes scrollTopShow {
+    from {
+        opacity: 0;
+        transform: translateY(22px) scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   24. БУРГЕР-МЕНЮ
+   ========================================================= */
+
+.navigation.active .navigation__item {
+    animation: mobileMenuItemShow 0.45s ease both;
+}
+
+.navigation.active .navigation__item:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.navigation.active .navigation__item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.navigation.active .navigation__item:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.navigation.active .navigation__item:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+@keyframes mobileMenuItemShow {
+    from {
+        opacity: 0;
+        transform: translateX(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   25. AOS — ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ
+   ========================================================= */
+
+[data-aos] {
+    will-change: transform, opacity;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(36px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(36px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-36px);
+}
+
+[data-aos="zoom-in"] {
+    transform: scale(0.94);
+}
+
+
+/* =========================================================
+   26. ПЛАВНОЕ ПОЯВЛЕНИЕ ИЗОБРАЖЕНИЙ
+   ========================================================= */
+
+img[loading="lazy"] {
+    opacity: 0;
+    animation: lazyImageShow 0.65s 0.15s ease forwards;
+}
+
+@keyframes lazyImageShow {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   27. АДАПТАЦИЯ АНИМАЦИЙ
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .hero__video,
+    .promotion__image img,
+    .final-cta__background,
+    .page-hero__background {
+        animation-duration: 24s;
+    }
+
+    .hero-fact:hover {
+        padding-left: 0;
+    }
+
+    .master-preview:hover,
+    .master-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+@media (hover: none) {
+    .button::after {
+        display: none;
+    }
+
+    .hero-fact:hover {
+        padding-left: 0;
+    }
+
+    .service-preview__content,
+    .work-card__overlay {
+        transform: none;
+    }
+
+    .master-preview:hover,
+    .master-card:hover {
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body,
+    .hero__video,
+    .hero__texture,
+    .hero__title span,
+    .section-title span,
+    .promotion__title span,
+    .final-cta__title span,
+    .page-hero__title span,
+    .section-label::before,
+    .ticker__track,
+    .ticker__symbol,
+    .promotion__image img,
+    .promotion__badge,
+    .promotion__new-price,
+    .review-card__rating,
+    .final-cta__background,
+    .page-hero__background {
+        animation: none !important;
+    }
+}

@@ -1,0 +1,68 @@
+/* Финальные исправления: подключается последним */
+:root {
+  --color-black: #070707;
+  --color-dark: #131313;
+  --color-dark-light: #1b1b1b;
+  --color-white: #f5f2ed;
+  --color-white-soft: #d9d5cf;
+  --color-copper: #b87333;
+  --color-copper-light: #d99a5c;
+}
+html { scroll-behavior: smooth; }
+body {
+  color: var(--color-white);
+  background: #111 url("../images/backgrounds/texture-dark.jpg") center/720px repeat;
+}
+body, body * { -webkit-text-fill-color: currentColor; }
+img { max-width: 100%; }
+.header { background: rgba(7,7,7,.96); backdrop-filter: blur(12px); }
+.logo { min-width: 190px; }
+.logo__image {
+  width: 52px; height: 52px; flex: 0 0 52px; object-fit: cover;
+  border-radius: 50%; border: 1px solid rgba(184,115,51,.45);
+}
+.logo__name, .logo__caption, .navigation__link, .header__phone-number { color: var(--color-white); }
+.hero {
+  min-height: 100svh;
+  background: url("../images/backgrounds/hero-poster.jpg") center/cover no-repeat;
+}
+.hero__video { display: none !important; }
+.hero__overlay {
+  background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.48) 52%, rgba(0,0,0,.22) 100%);
+}
+.hero__title, .hero__description, .hero-fact__text { color: var(--color-white) !important; }
+.hero__title span, .hero__label, .hero-fact__number { color: var(--color-copper-light) !important; }
+.page-hero { position: relative; min-height: 590px; overflow: hidden; background: #111; }
+.page-hero__background {
+  position: absolute; inset: 0; z-index: 0;
+  background-position: center !important; background-size: cover !important; background-repeat: no-repeat !important;
+  opacity: 1 !important; filter: none !important; transform: none !important;
+}
+.page-hero__background::after { content: none !important; display: none !important; }
+.page-hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,.76), rgba(0,0,0,.42) 58%, rgba(0,0,0,.22));
+}
+.page-hero::after { content: none !important; display: none !important; }
+.page-hero__container, .page-hero .container, .page-hero__content { position: relative; z-index: 2; }
+.page-hero__title, .page-hero__description, .breadcrumbs, .breadcrumbs a { color: var(--color-white) !important; }
+.promotion__image img { width:100%; height:100%; object-fit:cover; }
+.final-cta { background-position:center; background-size:cover; }
+.review-card { background:#202020; border:1px solid rgba(184,115,51,.35); }
+.review-card__text, .review-card__author h3 { color:var(--color-white) !important; }
+.review-card__author p { color:var(--color-white-soft) !important; }
+.service-card img, .advantage-card img { filter: sepia(1) saturate(.7) brightness(1.6); }
+.master-card__image img, .work-card img { width:100%; height:100%; object-fit:cover; }
+.form-control, input, select, textarea { color:var(--color-white); background:#151515; }
+.form-control::placeholder, input::placeholder, textarea::placeholder { color:#898989; }
+@media (max-width: 980px) {
+  .logo { min-width:auto; }
+  .page-hero { min-height:500px; }
+  .hero__overlay { background:rgba(0,0,0,.65); }
+}
+@media (max-width: 640px) {
+  .logo__image { width:44px; height:44px; flex-basis:44px; }
+  .logo__text { display:block; }
+  .page-hero { min-height:430px; }
+  .page-hero::before { background:rgba(0,0,0,.62); }
+}

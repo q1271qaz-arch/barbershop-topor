@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Мастера барбершопа «Топор» — Санкт-Петербург</title>
+
+    <meta
+        name="description"
+        content="Команда барбершопа «Топор» в Санкт-Петербурге. Опытные мастера мужских стрижек, бороды, бритья и укладки."
+    >
+
+    <meta
+        name="keywords"
+        content="барбер Санкт-Петербург, мастера барбершопа, мужской мастер, барбершоп Топор"
+    >
+
+    <meta name="author" content="Барбершоп Топор">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Мастера барбершопа «Топор»">
+    <meta
+        property="og:description"
+        content="Познакомьтесь с командой профессиональных барберов в Санкт-Петербурге."
+    >
+    <meta property="og:url" content="https://ваш-домен.ru/masters.html">
+    <meta
+        property="og:image"
+        content="https://ваш-домен.ru/images/backgrounds/masters-bg.jpg"
+    >
+
+    <meta name="theme-color" content="#0b0b0b">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/final.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Barbershop",
+        "name": "Барбершоп Топор",
+        "url": "https://ваш-домен.ru/masters.html",
+        "telephone": "+7-812-555-35-35",
+        "priceRange": "₽₽",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Невский проспект, 88",
+            "addressLocality": "Санкт-Петербург",
+            "addressCountry": "RU"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="page-overlay" id="pageOverlay"></div>
+
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Барбершоп Топор — главная"
+            >
+                <img
+                    class="logo__image"
+                    src="images/logo/logo-topor-white.jpg"
+                    alt="Логотип барбершопа Топор"
+                >
+
+                <span class="logo__text">
+                    <span class="logo__name">Топор</span>
+                    <span class="logo__caption">Барбершоп</span>
+                </span>
+            </a>
+
+            <nav class="navigation" id="navigation">
+                <button
+                    class="navigation__close"
+                    id="menuClose"
+                    type="button"
+                    aria-label="Закрыть меню"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link"
+                            href="index.html"
+                        >
+                            Главная
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link"
+                            href="services.html"
+                        >
+                            Услуги и цены
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link navigation__link--active"
+                            href="masters.html"
+                        >
+                            Мастера
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link"
+                            href="contacts.html"
+                        >
+                            Контакты и запись
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="navigation__mobile-info">
+                    <a href="tel:+78125553535">
+                        +7 (812) 555-35-35
+                    </a>
+
+                    <span>
+                        Санкт-Петербург, Невский проспект, 88
+                    </span>
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <a
+                    class="header__phone"
+                    href="tel:+78125553535"
+                >
+                    <span class="header__phone-label">
+                        Запись по телефону
+                    </span>
+
+                    <span class="header__phone-number">
+                        +7 (812) 555-35-35
+                    </span>
+                </a>
+
+                <a
+                    class="button button--small button--copper"
+                    href="contacts.html#booking"
+                >
+                    Записаться
+                </a>
+
+                <button
+                    class="burger"
+                    id="menuOpen"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div
+                class="page-hero__background"
+                style="background-image: url('images/backgrounds/masters-bg.jpg');"
+            ></div>
+
+            <div class="container">
+                <div class="page-hero__content">
+
+                    <nav
+                        class="breadcrumbs"
+                        aria-label="Хлебные крошки"
+                        data-aos="fade-up"
+                    >
+                        <a href="index.html">Главная</a>
+                        <span>/</span>
+                        <span>Мастера</span>
+                    </nav>
+
+                    <h1
+                        class="page-hero__title"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        Наши
+                        <span>мастера</span>
+                    </h1>
+
+                    <p
+                        class="page-hero__description"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        Каждый мастер работает в своём стиле, но всех
+                        объединяют точность, опыт и уважение к клиенту.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p
+                            class="section-label"
+                            data-aos="fade-up"
+                        >
+                            Команда барбершопа
+                        </p>
+
+                        <h2
+                            class="section-title"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            Люди, которым
+                            <span>можно доверять</span>
+                        </h2>
+                    </div>
+
+                    <p
+                        class="section-heading__description"
+                        data-aos="fade-left"
+                    >
+                        Нажмите на карточку мастера, чтобы увидеть подробную
+                        информацию, специализацию и примеры работ.
+                    </p>
+                </div>
+
+                <div class="masters-grid">
+
+                    <article
+                        class="master-card"
+                        tabindex="0"
+                        role="button"
+                        data-master="alexander"
+                        aria-label="Открыть информацию о мастере Александре Морозове"
+                        data-aos="fade-up"
+                    >
+                        <div class="master-card__image">
+                            <img
+                                src="images/masters/master-01.jpg"
+                                alt="Топ-барбер Александр Морозов"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="master-card__content">
+                            <h3 class="master-card__name">
+                                Александр Морозов
+                            </h3>
+
+                            <p class="master-card__specialization">
+                                Топ-барбер
+                            </p>
+
+                            <p class="master-card__experience">
+                                Стаж: 9 лет
+                            </p>
+
+                            <span class="master-card__button">
+                                →
+                            </span>
+                        </div>
+                    </article>
+
+                    <article
+                        class="master-card"
+                        tabindex="0"
+                        role="button"
+                        data-master="maxim"
+                        aria-label="Открыть информацию о мастере Максиме Волкове"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="master-card__image">
+                            <img
+                                src="images/masters/master-02.jpg"
+                                alt="Барбер-стилист Максим Волков"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="master-card__content">
+                            <h3 class="master-card__name">
+                                Максим Волков
+                            </h3>
+
+                            <p class="master-card__specialization">
+                                Барбер-стилист
+                            </p>
+
+                            <p class="master-card__experience">
+                                Стаж: 6 лет
+                            </p>
+
+                            <span class="master-card__button">
+                                →
+                            </span>
+                        </div>
+                    </article>
+
+                    <article
+                        class="master-card"
+                        tabindex="0"
+                        role="button"
+                        data-master="dmitry"
+                        aria-label="Открыть информацию о мастере Дмитрии Орлове"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="master-card__image">
+                            <img
+                                src="images/masters/master-03.jpg"
+                                alt="Мастер бороды Дмитрий Орлов"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="master-card__content">
+                            <h3 class="master-card__name">
+                                Дмитрий Орлов
+                            </h3>
+
+                            <p class="master-card__specialization">
+                                Мастер бороды
+                            </p>
+
+                            <p class="master-card__experience">
+                                Стаж: 7 лет
+                            </p>
+
+                            <span class="master-card__button">
+                                →
+                            </span>
+                        </div>
+                    </article>
+
+                    <article
+                        class="master-card"
+                        tabindex="0"
+                        role="button"
+                        data-master="artem"
+                        aria-label="Открыть информацию о мастере Артёме Крылове"
+                        data-aos="fade-up"
+                    >
+                        <div class="master-card__image">
+                            <img
+                                src="images/masters/master-04.jpg"
+                                alt="Барбер Артём Крылов"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="master-card__content">
+                            <h3 class="master-card__name">
+                                Артём Крылов
+                            </h3>
+
+                            <p class="master-card__specialization">
+                                Барбер
+                            </p>
+
+                            <p class="master-card__experience">
+                                Стаж: 4 года
+                            </p>
+
+                            <span class="master-card__button">
+                                →
+                            </span>
+                        </div>
+                    </article>
+
+                    <article
+                        class="master-card"
+                        tabindex="0"
+                        role="button"
+                        data-master="roman"
+                        aria-label="Открыть информацию о мастере Романе Беляеве"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="master-card__image">
+                            <img
+                                src="images/masters/master-05.jpg"
+                                alt="Топ-барбер Роман Беляев"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="master-card__content">
+                            <h3 class="master-card__name">
+                                Роман Беляев
+                            </h3>
+
+                            <p class="master-card__specialization">
+                                Топ-барбер
+                            </p>
+
+                            <p class="master-card__experience">
+                                Стаж: 10 лет
+                            </p>
+
+                            <span class="master-card__button">
+                                →
+                            </span>
+                        </div>
+                    </article>
+
+                    <article
+                        class="master-card"
+                        tabindex="0"
+                        role="button"
+                        data-master="nikita"
+                        aria-label="Открыть информацию о мастере Никите Серове"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="master-card__image">
+                            <img
+                                src="images/masters/master-06.jpg"
+                                alt="Барбер Никита Серов"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="master-card__content">
+                            <h3 class="master-card__name">
+                                Никита Серов
+                            </h3>
+
+                            <p class="master-card__specialization">
+                                Fade-специалист
+                            </p>
+
+                            <p class="master-card__experience">
+                                Стаж: 5 лет
+                            </p>
+
+                            <span class="master-card__button">
+                                →
+                            </span>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section home-services">
+            <div class="home-services__texture"></div>
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p
+                            class="section-label"
+                            data-aos="fade-up"
+                        >
+                            Наш подход
+                        </p>
+
+                        <h2
+                            class="section-title"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            Не просто стрижка,
+                            <span>а точная работа</span>
+                        </h2>
+                    </div>
+
+                    <p
+                        class="section-heading__description"
+                        data-aos="fade-left"
+                    >
+                        Перед началом мастер обсуждает пожелания, оценивает
+                        форму лица, структуру волос и предлагает подходящий
+                        вариант.
+                    </p>
+                </div>
+
+                <div class="advantages__grid">
+
+                    <article
+                        class="advantage-card"
+                        data-aos="fade-up"
+                    >
+                        <div class="advantage-card__number">01</div>
+
+                        <div class="advantage-card__icon">
+                            <img
+                                src="images/advantages/experience.svg"
+                                alt=""
+                            >
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Консультация
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Мастер уточняет ваши пожелания и помогает выбрать
+                            форму, которая подходит именно вам.
+                        </p>
+                    </article>
+
+                    <article
+                        class="advantage-card"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        <div class="advantage-card__number">02</div>
+
+                        <div class="advantage-card__icon">
+                            <img
+                                src="images/advantages/tools.svg"
+                                alt=""
+                            >
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Подготовка
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Используем профессиональную косметику и тщательно
+                            подготавливаем волосы и кожу к процедуре.
+                        </p>
+                    </article>
+
+                    <article
+                        class="advantage-card"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <div class="advantage-card__number">03</div>
+
+                        <div class="advantage-card__icon">
+                            <img
+                                src="images/services/haircut.svg"
+                                alt=""
+                            >
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Точная техника
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Чистые переходы, выверенные линии и работа с учётом
+                            индивидуальных особенностей.
+                        </p>
+                    </article>
+
+                    <article
+                        class="advantage-card"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        <div class="advantage-card__number">04</div>
+
+                        <div class="advantage-card__icon">
+                            <img
+                                src="images/services/styling.svg"
+                                alt=""
+                            >
+                        </div>
+
+                        <h3 class="advantage-card__title">
+                            Финальная укладка
+                        </h3>
+
+                        <p class="advantage-card__text">
+                            Показываем, как поддерживать форму дома, и
+                            рекомендуем подходящие средства.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <div
+                class="final-cta__background"
+                style="background-image: url('images/backgrounds/final-cta.jpg');"
+            ></div>
+
+            <div class="final-cta__overlay"></div>
+
+            <div class="container final-cta__container">
+
+                <div
+                    class="final-cta__content"
+                    data-aos="zoom-in"
+                >
+                    <p class="section-label">
+                        Нашли своего мастера?
+                    </p>
+
+                    <h2 class="final-cta__title">
+                        Запишитесь
+                        <span>на удобное время</span>
+                    </h2>
+
+                    <p class="final-cta__description">
+                        В форме записи можно выбрать мастера, услугу и дату
+                        посещения.
+                    </p>
+
+                    <a
+                        class="button button--copper button--large"
+                        href="contacts.html#booking"
+                    >
+                        Перейти к записи
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__top">
+
+                <div class="footer__brand">
+                    <a
+                        class="logo footer__logo"
+                        href="index.html"
+                    >
+                        <img
+                            class="logo__image"
+                            src="images/logo/logo-topor-white.jpg"
+                            alt="Логотип барбершопа Топор"
+                        >
+
+                        <span class="logo__text">
+                            <span class="logo__name">Топор</span>
+                            <span class="logo__caption">Барбершоп</span>
+                        </span>
+                    </a>
+
+                    <p class="footer__description">
+                        Мужской барбершоп в центре Санкт-Петербурга.
+                        Стрижки, борода, бритьё и профессиональный уход.
+                    </p>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Навигация</h3>
+
+                    <ul class="footer__links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги и цены</a></li>
+                        <li><a href="masters.html">Мастера</a></li>
+                        <li><a href="contacts.html">Контакты и запись</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+
+                    <ul class="footer__contacts">
+                        <li>
+                            <span>Адрес</span>
+                            <p>
+                                Санкт-Петербург,<br>
+                                Невский проспект, 88
+                            </p>
+                        </li>
+
+                        <li>
+                            <span>Телефон</span>
+                            <a href="tel:+78125553535">
+                                +7 (812) 555-35-35
+                            </a>
+                        </li>
+
+                        <li>
+                            <span>Email</span>
+                            <a href="mailto:info@topor-barbershop.ru">
+                                info@topor-barbershop.ru
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Часы работы</h3>
+
+                    <ul class="footer__schedule">
+                        <li>
+                            <span>Понедельник — пятница</span>
+                            <strong>10:00–22:00</strong>
+                        </li>
+
+                        <li>
+                            <span>Суббота — воскресенье</span>
+                            <strong>10:00–23:00</strong>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="#" aria-label="ВКонтакте">VK</a>
+                        <a href="#" aria-label="Telegram">TG</a>
+                        <a href="#" aria-label="MAX">MAX</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p>
+                    © <span id="currentYear"></span>
+                    Барбершоп «Топор». Все права защищены.
+                </p>
+
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <div
+        class="master-modal"
+        id="masterModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalMasterName"
+    >
+        <div class="master-modal__dialog">
+
+            <button
+                class="master-modal__close"
+                id="masterModalClose"
+                type="button"
+                aria-label="Закрыть окно"
+            >
+                ×
+            </button>
+
+            <div class="master-modal__body">
+
+                <div class="master-modal__photo">
+                    <img
+                        id="modalMasterPhoto"
+                        src="images/masters/master-01.jpg"
+                        alt=""
+                    >
+                </div>
+
+                <div class="master-modal__info">
+
+                    <p
+                        class="section-label"
+                        id="modalMasterLabel"
+                    >
+                        Топ-барбер
+                    </p>
+
+                    <h2
+                        class="master-modal__name"
+                        id="modalMasterName"
+                    >
+                        Александр Морозов
+                    </h2>
+
+                    <p
+                        class="master-modal__role"
+                        id="modalMasterRole"
+                    >
+                        Мужские стрижки и классический стиль
+                    </p>
+
+                    <p
+                        class="master-modal__description"
+                        id="modalMasterDescription"
+                    >
+                        Александр специализируется на классических мужских
+                        стрижках, точных формах и работе с бородой.
+                    </p>
+
+                    <ul class="master-modal__details">
+                        <li>
+                            <span>Стаж</span>
+                            <strong id="modalMasterExperience">9 лет</strong>
+                        </li>
+
+                        <li>
+                            <span>Специализация</span>
+                            <strong id="modalMasterSpecialization">
+                                Классика, борода, бритьё
+                            </strong>
+                        </li>
+
+                        <li>
+                            <span>Рабочие дни</span>
+                            <strong id="modalMasterSchedule">
+                                Пн, Вт, Чт, Пт, Сб
+                            </strong>
+                        </li>
+                    </ul>
+
+                    <h3 class="footer__title">
+                        Примеры работ
+                    </h3>
+
+                    <div
+                        class="master-gallery"
+                        id="modalMasterGallery"
+                    ></div>
+
+                    <a
+                        class="button button--copper button--large"
+                        id="modalBookingLink"
+                        href="contacts.html#booking"
+                    >
+                        Записаться к мастеру
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <button
+        class="scroll-top"
+        id="scrollTop"
+        type="button"
+        aria-label="Вернуться наверх"
+    >
+        ↑
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/masters-modal.js"></script>
+
+</body>
+</html>

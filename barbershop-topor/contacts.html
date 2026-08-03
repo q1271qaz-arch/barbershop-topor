@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Контакты и запись — барбершоп «Топор»</title>
+
+    <meta
+        name="description"
+        content="Запись в барбершоп «Топор» в Санкт-Петербурге. Выберите услугу, мастера и удобную дату посещения."
+    >
+
+    <meta
+        name="keywords"
+        content="записаться в барбершоп Санкт-Петербург, барбершоп Невский проспект, мужская стрижка запись"
+    >
+
+    <meta name="author" content="Барбершоп Топор">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Контакты и запись — барбершоп «Топор»">
+
+    <meta
+        property="og:description"
+        content="Запишитесь на мужскую стрижку, оформление бороды или комплексную услугу."
+    >
+
+    <meta property="og:url" content="https://ваш-домен.ru/contacts.html">
+
+    <meta
+        property="og:image"
+        content="https://ваш-домен.ru/images/backgrounds/contacts-bg.jpg"
+    >
+
+    <meta name="theme-color" content="#0b0b0b">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/final.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Barbershop",
+        "name": "Барбершоп Топор",
+        "url": "https://ваш-домен.ru/contacts.html",
+        "telephone": "+7-812-555-35-35",
+        "email": "info@topor-barbershop.ru",
+        "priceRange": "₽₽",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Невский проспект, 88",
+            "addressLocality": "Санкт-Петербург",
+            "postalCode": "191025",
+            "addressCountry": "RU"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday"
+                ],
+                "opens": "10:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "10:00",
+                "closes": "23:00"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="page-overlay" id="pageOverlay"></div>
+
+    <header class="header" id="header">
+        <div class="container header__container">
+
+            <a
+                class="logo"
+                href="index.html"
+                aria-label="Барбершоп Топор — главная"
+            >
+                <img
+                    class="logo__image"
+                    src="images/logo/logo-topor-white.jpg"
+                    alt="Логотип барбершопа Топор"
+                >
+
+                <span class="logo__text">
+                    <span class="logo__name">Топор</span>
+                    <span class="logo__caption">Барбершоп</span>
+                </span>
+            </a>
+
+            <nav class="navigation" id="navigation">
+                <button
+                    class="navigation__close"
+                    id="menuClose"
+                    type="button"
+                    aria-label="Закрыть меню"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link"
+                            href="index.html"
+                        >
+                            Главная
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link"
+                            href="services.html"
+                        >
+                            Услуги и цены
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link"
+                            href="masters.html"
+                        >
+                            Мастера
+                        </a>
+                    </li>
+
+                    <li class="navigation__item">
+                        <a
+                            class="navigation__link navigation__link--active"
+                            href="contacts.html"
+                        >
+                            Контакты и запись
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="navigation__mobile-info">
+                    <a href="tel:+78125553535">
+                        +7 (812) 555-35-35
+                    </a>
+
+                    <span>
+                        Санкт-Петербург, Невский проспект, 88
+                    </span>
+                </div>
+            </nav>
+
+            <div class="header__actions">
+                <a
+                    class="header__phone"
+                    href="tel:+78125553535"
+                >
+                    <span class="header__phone-label">
+                        Запись по телефону
+                    </span>
+
+                    <span class="header__phone-number">
+                        +7 (812) 555-35-35
+                    </span>
+                </a>
+
+                <a
+                    class="button button--small button--copper"
+                    href="#booking"
+                >
+                    Записаться
+                </a>
+
+                <button
+                    class="burger"
+                    id="menuOpen"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div
+                class="page-hero__background"
+                style="background-image: url('images/backgrounds/contacts-bg.jpg');"
+            ></div>
+
+            <div class="container">
+                <div class="page-hero__content">
+
+                    <nav
+                        class="breadcrumbs"
+                        aria-label="Хлебные крошки"
+                        data-aos="fade-up"
+                    >
+                        <a href="index.html">Главная</a>
+                        <span>/</span>
+                        <span>Контакты и запись</span>
+                    </nav>
+
+                    <h1
+                        class="page-hero__title"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                    >
+                        Контакты
+                        <span>и запись</span>
+                    </h1>
+
+                    <p
+                        class="page-hero__description"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        Выберите услугу, мастера и удобную дату.
+                        После отправки формы администратор свяжется с вами
+                        и подтвердит запись.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="booking">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p
+                            class="section-label"
+                            data-aos="fade-up"
+                        >
+                            Запись онлайн
+                        </p>
+
+                        <h2
+                            class="section-title"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            Выберите удобное
+                            <span>время</span>
+                        </h2>
+                    </div>
+
+                    <p
+                        class="section-heading__description"
+                        data-aos="fade-left"
+                    >
+                        Заполните форму. Обязательные поля отмечены
+                        звёздочкой.
+                    </p>
+                </div>
+
+                <div class="contacts-grid">
+
+                    <div
+                        class="contacts-info"
+                        data-aos="fade-right"
+                    >
+
+                        <article class="contact-card">
+                            <span class="contact-card__label">
+                                Адрес
+                            </span>
+
+                            <p class="contact-card__value">
+                                Санкт-Петербург,<br>
+                                Невский проспект, 88
+                            </p>
+                        </article>
+
+                        <article class="contact-card">
+                            <span class="contact-card__label">
+                                Телефон
+                            </span>
+
+                            <a href="tel:+78125553535">
+                                +7 (812) 555-35-35
+                            </a>
+                        </article>
+
+                        <article class="contact-card">
+                            <span class="contact-card__label">
+                                Электронная почта
+                            </span>
+
+                            <a href="mailto:info@topor-barbershop.ru">
+                                info@topor-barbershop.ru
+                            </a>
+                        </article>
+
+                        <article class="contact-card">
+                            <span class="contact-card__label">
+                                Часы работы
+                            </span>
+
+                            <ul class="schedule-list">
+                                <li>
+                                    <span>Пн — Пт</span>
+                                    <strong>10:00–22:00</strong>
+                                </li>
+
+                                <li>
+                                    <span>Сб — Вс</span>
+                                    <strong>10:00–23:00</strong>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="contact-card">
+                            <span class="contact-card__label">
+                                Социальные сети
+                            </span>
+
+                            <div class="footer__socials">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="ВКонтакте"
+                                >
+                                    VK
+                                </a>
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Telegram"
+                                >
+                                    TG
+                                </a>
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="MAX"
+                                >
+                                    MAX
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div
+                        class="booking"
+                        data-aos="fade-left"
+                    >
+                        <h2 class="booking__title">
+                            Записаться
+                        </h2>
+
+                        <p class="booking__description">
+                            Оставьте свои данные. Мы свяжемся с вами,
+                            чтобы подтвердить выбранное время.
+                        </p>
+
+                        <form
+                            class="booking-form"
+                            id="bookingForm"
+                            novalidate
+                        >
+
+                            <div class="form-group">
+                                <label
+                                    class="form-label"
+                                    for="clientName"
+                                >
+                                    Ваше имя *
+                                </label>
+
+                                <input
+                                    class="form-control"
+                                    id="clientName"
+                                    name="client_name"
+                                    type="text"
+                                    placeholder="Например, Александр"
+                                    autocomplete="name"
+                                    minlength="2"
+                                    required
+                                >
+
+                                <span
+                                    class="form-error"
+                                    id="clientNameError"
+                                ></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="form-label"
+                                    for="clientPhone"
+                                >
+                                    Телефон *
+                                </label>
+
+                                <input
+                                    class="form-control"
+                                    id="clientPhone"
+                                    name="client_phone"
+                                    type="tel"
+                                    placeholder="+7 (___) ___-__-__"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                                <span
+                                    class="form-error"
+                                    id="clientPhoneError"
+                                ></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="form-label"
+                                    for="serviceSelect"
+                                >
+                                    Услуга *
+                                </label>
+
+                                <select
+                                    class="form-control"
+                                    id="serviceSelect"
+                                    name="service"
+                                    required
+                                >
+                                    <option value="">
+                                        Выберите услугу
+                                    </option>
+
+                                    <option value="Мужская стрижка">
+                                        Мужская стрижка — 1 800 ₽
+                                    </option>
+
+                                    <option value="Стрижка машинкой">
+                                        Стрижка машинкой — 1 200 ₽
+                                    </option>
+
+                                    <option value="Детская стрижка">
+                                        Детская стрижка — 1 400 ₽
+                                    </option>
+
+                                    <option value="Моделирование бороды">
+                                        Моделирование бороды — 1 200 ₽
+                                    </option>
+
+                                    <option value="Королевское бритьё">
+                                        Королевское бритьё — 1 500 ₽
+                                    </option>
+
+                                    <option value="Стрижка и борода">
+                                        Стрижка и борода — 2 700 ₽
+                                    </option>
+
+                                    <option value="Отец и сын">
+                                        Отец и сын — 2 900 ₽
+                                    </option>
+
+                                    <option value="Полный образ">
+                                        Полный образ — 3 900 ₽
+                                    </option>
+                                </select>
+
+                                <span
+                                    class="form-error"
+                                    id="serviceSelectError"
+                                ></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="form-label"
+                                    for="masterSelect"
+                                >
+                                    Мастер *
+                                </label>
+
+                                <select
+                                    class="form-control"
+                                    id="masterSelect"
+                                    name="master"
+                                    required
+                                >
+                                    <option value="">
+                                        Выберите мастера
+                                    </option>
+
+                                    <option value="Любой свободный мастер">
+                                        Любой свободный мастер
+                                    </option>
+
+                                    <option value="Александр Морозов">
+                                        Александр Морозов
+                                    </option>
+
+                                    <option value="Максим Волков">
+                                        Максим Волков
+                                    </option>
+
+                                    <option value="Дмитрий Орлов">
+                                        Дмитрий Орлов
+                                    </option>
+
+                                    <option value="Артём Крылов">
+                                        Артём Крылов
+                                    </option>
+
+                                    <option value="Роман Беляев">
+                                        Роман Беляев
+                                    </option>
+
+                                    <option value="Никита Серов">
+                                        Никита Серов
+                                    </option>
+                                </select>
+
+                                <span
+                                    class="form-error"
+                                    id="masterSelectError"
+                                ></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="form-label"
+                                    for="bookingDate"
+                                >
+                                    Дата *
+                                </label>
+
+                                <input
+                                    class="form-control"
+                                    id="bookingDate"
+                                    name="booking_date"
+                                    type="date"
+                                    required
+                                >
+
+                                <span
+                                    class="form-error"
+                                    id="bookingDateError"
+                                ></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label
+                                    class="form-label"
+                                    for="bookingTime"
+                                >
+                                    Желаемое время
+                                </label>
+
+                                <select
+                                    class="form-control"
+                                    id="bookingTime"
+                                    name="booking_time"
+                                >
+                                    <option value="">
+                                        Выберите время
+                                    </option>
+
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="21:00">21:00</option>
+                                </select>
+
+                                <span class="form-error"></span>
+                            </div>
+
+                            <div class="form-group form-group--full">
+                                <label
+                                    class="form-label"
+                                    for="clientComment"
+                                >
+                                    Комментарий
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="clientComment"
+                                    name="comment"
+                                    placeholder="Напишите пожелания к записи"
+                                ></textarea>
+
+                                <span class="form-error"></span>
+                            </div>
+
+                            <div class="form-group form-group--full">
+                                <div class="form-checkbox">
+                                    <input
+                                        id="privacyConsent"
+                                        name="privacy_consent"
+                                        type="checkbox"
+                                        required
+                                    >
+
+                                    <label for="privacyConsent">
+                                        Я согласен на обработку персональных
+                                        данных и принимаю политику
+                                        конфиденциальности.
+                                    </label>
+                                </div>
+
+                                <span
+                                    class="form-error"
+                                    id="privacyConsentError"
+                                ></span>
+                            </div>
+
+                            <div class="form-group form-group--full">
+                                <div
+                                    class="form-status"
+                                    id="formStatus"
+                                    role="status"
+                                    aria-live="polite"
+                                ></div>
+                            </div>
+
+                            <div class="form-group form-group--full">
+                                <button
+                                    class="button button--copper button--large"
+                                    id="bookingSubmit"
+                                    type="submit"
+                                >
+                                    Отправить заявку
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section map-section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p
+                            class="section-label"
+                            data-aos="fade-up"
+                        >
+                            Как нас найти
+                        </p>
+
+                        <h2
+                            class="section-title"
+                            data-aos="fade-up"
+                            data-aos-delay="100"
+                        >
+                            В центре
+                            <span>Петербурга</span>
+                        </h2>
+                    </div>
+
+                    <p
+                        class="section-heading__description"
+                        data-aos="fade-left"
+                    >
+                        Барбершоп находится на Невском проспекте,
+                        недалеко от станции метро «Маяковская».
+                    </p>
+                </div>
+
+                <div
+                    class="map-container"
+                    id="barbershopMap"
+                    data-aos="fade-up"
+                    aria-label="Карта с расположением барбершопа Топор"
+                ></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__top">
+
+                <div class="footer__brand">
+                    <a
+                        class="logo footer__logo"
+                        href="index.html"
+                    >
+                        <img
+                            class="logo__image"
+                            src="images/logo/logo-topor-white.jpg"
+                            alt="Логотип барбершопа Топор"
+                        >
+
+                        <span class="logo__text">
+                            <span class="logo__name">Топор</span>
+                            <span class="logo__caption">Барбершоп</span>
+                        </span>
+                    </a>
+
+                    <p class="footer__description">
+                        Мужской барбершоп в центре Санкт-Петербурга.
+                        Стрижки, борода, бритьё и профессиональный уход.
+                    </p>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Навигация</h3>
+
+                    <ul class="footer__links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги и цены</a></li>
+                        <li><a href="masters.html">Мастера</a></li>
+                        <li><a href="contacts.html">Контакты и запись</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+
+                    <ul class="footer__contacts">
+                        <li>
+                            <span>Адрес</span>
+
+                            <p>
+                                Санкт-Петербург,<br>
+                                Невский проспект, 88
+                            </p>
+                        </li>
+
+                        <li>
+                            <span>Телефон</span>
+
+                            <a href="tel:+78125553535">
+                                +7 (812) 555-35-35
+                            </a>
+                        </li>
+
+                        <li>
+                            <span>Email</span>
+
+                            <a href="mailto:info@topor-barbershop.ru">
+                                info@topor-barbershop.ru
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h3 class="footer__title">Часы работы</h3>
+
+                    <ul class="footer__schedule">
+                        <li>
+                            <span>Понедельник — пятница</span>
+                            <strong>10:00–22:00</strong>
+                        </li>
+
+                        <li>
+                            <span>Суббота — воскресенье</span>
+                            <strong>10:00–23:00</strong>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="#" aria-label="ВКонтакте">VK</a>
+                        <a href="#" aria-label="Telegram">TG</a>
+                        <a href="#" aria-label="MAX">MAX</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer__bottom">
+                <p>
+                    © <span id="currentYear"></span>
+                    Барбершоп «Топор». Все права защищены.
+                </p>
+
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <button
+        class="scroll-top"
+        id="scrollTop"
+        type="button"
+        aria-label="Вернуться наверх"
+    >
+        ↑
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script
+        src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+        type="text/javascript"
+    ></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/booking-form.js"></script>
+
+</body>
+</html>

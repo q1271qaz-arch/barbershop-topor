@@ -1,0 +1,1192 @@
+/* =========================================================
+   БАРБЕРШОП «ТОПОР»
+   Адаптивные стили от 320px до 1920px
+   ========================================================= */
+
+
+/* =========================================================
+   БОЛЬШИЕ ЭКРАНЫ — ДО 1440px
+   ========================================================= */
+
+@media (max-width: 1440px) {
+    :root {
+        --container-width: 1200px;
+    }
+
+    .navigation__list {
+        gap: 22px;
+    }
+
+    .header__actions {
+        gap: 16px;
+    }
+
+    .hero__container {
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 50px;
+    }
+
+    .hero__title {
+        font-size: clamp(56px, 7vw, 96px);
+    }
+
+    .promotion__content {
+        padding: 56px;
+    }
+
+    .footer__top {
+        gap: 38px;
+    }
+}
+
+
+/* =========================================================
+   НОУТБУКИ — ДО 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+    :root {
+        --header-height: 82px;
+    }
+
+    .container {
+        width: min(100% - 36px, 1100px);
+    }
+
+    .header__phone {
+        display: none;
+    }
+
+    .navigation__list {
+        gap: 18px;
+    }
+
+    .navigation__link {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 860px;
+    }
+
+    .hero__container {
+        grid-template-columns: minmax(0, 1fr) 210px;
+        gap: 36px;
+    }
+
+    .hero__title {
+        font-size: clamp(54px, 7vw, 88px);
+    }
+
+    .hero__description {
+        max-width: 620px;
+        font-size: 17px;
+    }
+
+    .advantages__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-services__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-preview {
+        min-height: 470px;
+    }
+
+    .service-preview__title {
+        font-size: 31px;
+    }
+
+    .promotion__box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .promotion__content {
+        padding: 48px;
+    }
+
+    .promotion__title {
+        font-size: 54px;
+    }
+
+    .master-preview__image {
+        height: 450px;
+    }
+
+    .reviews__grid {
+        gap: 16px;
+    }
+
+    .review-card {
+        padding: 30px 26px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1.2fr 0.8fr 1fr;
+    }
+
+    .footer__column:last-child {
+        grid-column: 2 / 4;
+    }
+
+    .services-grid,
+    .masters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .master-modal__body {
+        grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .master-modal__info {
+        padding: 54px 42px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 28px;
+    }
+}
+
+
+/* =========================================================
+   ПЛАНШЕТЫ — ДО 992px
+   ========================================================= */
+
+@media (max-width: 992px) {
+    :root {
+        --header-height: 76px;
+    }
+
+    .section {
+        padding: 88px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 42px;
+    }
+
+    .section-heading__description {
+        max-width: 700px;
+    }
+
+    .header__actions .button {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1001;
+        width: min(88vw, 420px);
+        height: 100vh;
+        margin-left: 0;
+        padding: 90px 34px 40px;
+        overflow-y: auto;
+        border-left: 1px solid rgba(184, 115, 51, 0.28);
+        background:
+            linear-gradient(
+                rgba(10, 10, 10, 0.97),
+                rgba(10, 10, 10, 0.97)
+            ),
+            url("../images/backgrounds/texture-dark.jpg") center / 420px repeat;
+        box-shadow: -20px 0 50px rgba(0, 0, 0, 0.45);
+        transform: translateX(105%);
+        transition: transform 0.4s ease;
+    }
+
+    .navigation.active {
+        transform: translateX(0);
+    }
+
+    .navigation__close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        display: block;
+        width: 42px;
+        height: 42px;
+    }
+
+    .navigation__close span {
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        width: 27px;
+        height: 2px;
+        background: var(--color-white);
+    }
+
+    .navigation__close span:first-child {
+        transform: rotate(45deg);
+    }
+
+    .navigation__close span:last-child {
+        transform: rotate(-45deg);
+    }
+
+    .navigation__list {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navigation__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navigation__link {
+        width: 100%;
+        padding: 20px 0;
+        font-family: var(--font-heading);
+        font-size: 25px;
+        letter-spacing: 0.03em;
+    }
+
+    .navigation__link::after {
+        bottom: 13px;
+    }
+
+    .navigation__mobile-info {
+        display: grid;
+        gap: 13px;
+        margin-top: 38px;
+        padding-top: 26px;
+        border-top: 1px solid rgba(184, 115, 51, 0.28);
+    }
+
+    .navigation__mobile-info a {
+        color: var(--color-copper-light);
+        font-size: 19px;
+        font-weight: 700;
+    }
+
+    .navigation__mobile-info span {
+        color: var(--color-gray-light);
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .hero {
+        min-height: 820px;
+        padding-bottom: 80px;
+    }
+
+    .hero__container {
+        display: block;
+    }
+
+    .hero__content {
+        max-width: 760px;
+    }
+
+    .hero__title {
+        font-size: clamp(52px, 9vw, 82px);
+    }
+
+    .hero__facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin-top: 52px;
+        padding-left: 0;
+        border-top: 1px solid rgba(184, 115, 51, 0.35);
+        border-left: 0;
+    }
+
+    .hero-fact {
+        padding: 22px 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.09);
+        border-bottom: 0;
+    }
+
+    .hero-fact:last-child {
+        padding-bottom: 22px;
+        border-right: 0;
+    }
+
+    .home-services__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-preview:first-child {
+        grid-column: 1 / -1;
+    }
+
+    .work-card {
+        height: 470px;
+    }
+
+    .promotion__box {
+        grid-template-columns: 1fr;
+    }
+
+    .promotion__image {
+        min-height: 470px;
+    }
+
+    .promotion__image::after {
+        background: linear-gradient(
+            to top,
+            var(--color-black-soft),
+            transparent 60%
+        );
+    }
+
+    .promotion__content {
+        padding: 52px 44px 58px;
+    }
+
+    .home-masters__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-masters__grid .master-preview:last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        margin-inline: auto;
+    }
+
+    .reviews__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .reviews__grid .review-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .final-cta {
+        min-height: 560px;
+    }
+
+    .final-cta__container {
+        min-height: 560px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__column:last-child {
+        grid-column: auto;
+    }
+
+    .page-hero {
+        min-height: 500px;
+    }
+
+    .master-modal__body {
+        grid-template-columns: 1fr;
+    }
+
+    .master-modal__photo {
+        min-height: 520px;
+        max-height: 620px;
+    }
+
+    .master-modal__info {
+        padding: 42px 34px 48px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking {
+        padding: 38px 32px;
+    }
+}
+
+
+/* =========================================================
+   ПЛАНШЕТЫ И КРУПНЫЕ ТЕЛЕФОНЫ — ДО 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .container {
+        width: min(100% - 28px, 720px);
+    }
+
+    .section {
+        padding: 72px 0;
+    }
+
+    .section-label {
+        font-size: 11px;
+    }
+
+    .section-title {
+        font-size: clamp(38px, 9vw, 58px);
+    }
+
+    .logo__image {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo__name {
+        font-size: 23px;
+    }
+
+    .hero {
+        min-height: 760px;
+        padding-top: calc(var(--header-height) + 64px);
+    }
+
+    .hero__overlay {
+        background:
+            linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.94),
+                rgba(0, 0, 0, 0.65)
+            ),
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.82),
+                transparent 65%
+            );
+    }
+
+    .hero__title {
+        font-size: clamp(46px, 12vw, 70px);
+    }
+
+    .hero__description {
+        font-size: 16px;
+    }
+
+    .hero__buttons {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 360px;
+    }
+
+    .hero__buttons .button {
+        width: 100%;
+    }
+
+    .hero__facts {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-fact {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 16px 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .hero-fact:last-child {
+        padding-bottom: 16px;
+        border-bottom: 0;
+    }
+
+    .hero-fact__number {
+        min-width: 100px;
+        margin-bottom: 0;
+    }
+
+    .hero__scroll {
+        display: none;
+    }
+
+    .ticker__track {
+        font-size: 16px;
+    }
+
+    .advantages__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-card {
+        min-height: auto;
+    }
+
+    .home-services__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-preview:first-child {
+        grid-column: auto;
+    }
+
+    .service-preview {
+        min-height: 440px;
+    }
+
+    .work-card {
+        height: 430px;
+    }
+
+    .promotion__image {
+        min-height: 390px;
+    }
+
+    .promotion__content {
+        padding: 42px 30px 48px;
+    }
+
+    .promotion__title {
+        font-size: 46px;
+    }
+
+    .promotion__new-price {
+        font-size: 40px;
+    }
+
+    .home-masters__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-masters__grid .master-preview:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .master-preview__image {
+        height: 500px;
+    }
+
+    .reviews__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews__grid .review-card:last-child {
+        grid-column: auto;
+    }
+
+    .review-card {
+        min-height: 330px;
+    }
+
+    .final-cta__title {
+        font-size: clamp(44px, 11vw, 68px);
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__brand {
+        max-width: 520px;
+    }
+
+    .footer__bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .scroll-top {
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .page-hero {
+        min-height: 440px;
+        padding-bottom: 64px;
+    }
+
+    .page-hero__title {
+        font-size: clamp(48px, 12vw, 72px);
+    }
+
+    .services-grid,
+    .masters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .master-card__image {
+        height: 560px;
+    }
+
+    .master-modal {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .master-modal__dialog {
+        max-height: calc(100vh - 20px);
+    }
+
+    .master-modal__photo {
+        min-height: 430px;
+    }
+
+    .master-modal__name {
+        font-size: 40px;
+    }
+
+    .contacts-info {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group--full {
+        grid-column: auto;
+    }
+
+    .map-container {
+        height: 460px;
+    }
+}
+
+
+/* =========================================================
+   МОБИЛЬНЫЕ ТЕЛЕФОНЫ — ДО 576px
+   ========================================================= */
+
+@media (max-width: 576px) {
+    .container {
+        width: min(100% - 22px, 540px);
+    }
+
+    .section {
+        padding: 62px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 34px;
+    }
+
+    .section-title {
+        font-size: clamp(34px, 11vw, 48px);
+        line-height: 1;
+    }
+
+    .section-heading__description {
+        font-size: 15px;
+    }
+
+    .button--large {
+        min-width: 0;
+        min-height: 56px;
+        padding: 16px 22px;
+    }
+
+    .header__container {
+        gap: 15px;
+    }
+
+    .logo {
+        gap: 9px;
+    }
+
+    .logo__image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .logo__name {
+        font-size: 20px;
+    }
+
+    .logo__caption {
+        font-size: 8px;
+    }
+
+    .navigation {
+        width: 100%;
+        padding-inline: 26px;
+    }
+
+    .navigation__link {
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 130px;
+        padding-bottom: 56px;
+    }
+
+    .hero__video {
+        opacity: 0.68;
+    }
+
+    .hero__label {
+        margin-bottom: 20px;
+    }
+
+    .hero__title {
+        margin-bottom: 22px;
+        font-size: clamp(40px, 13vw, 58px);
+    }
+
+    .hero__title span {
+        margin-top: 8px;
+    }
+
+    .hero__description {
+        margin-bottom: 28px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero__facts {
+        margin-top: 38px;
+    }
+
+    .hero-fact__number {
+        min-width: 84px;
+        font-size: 29px;
+    }
+
+    .hero-fact__text {
+        font-size: 10px;
+    }
+
+    .ticker__track {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+
+    .ticker__symbol {
+        margin-inline: 20px;
+    }
+
+    .advantage-card {
+        padding: 30px 24px;
+    }
+
+    .advantage-card__number {
+        font-size: 50px;
+    }
+
+    .advantage-card__title {
+        font-size: 23px;
+    }
+
+    .service-preview {
+        min-height: 380px;
+    }
+
+    .service-preview__content {
+        padding: 24px;
+    }
+
+    .service-preview__title {
+        font-size: 29px;
+    }
+
+    .slider-controls {
+        width: 100%;
+    }
+
+    .slider-button {
+        width: 48px;
+        height: 48px;
+    }
+
+    .work-card {
+        height: 390px;
+    }
+
+    .work-card__overlay {
+        padding: 24px;
+    }
+
+    .work-card__overlay h3 {
+        font-size: 24px;
+    }
+
+    .promotion__box {
+        min-height: auto;
+    }
+
+    .promotion__image {
+        min-height: 310px;
+    }
+
+    .promotion__badge {
+        top: 20px;
+        left: 20px;
+    }
+
+    .promotion__content {
+        padding: 34px 22px 40px;
+    }
+
+    .promotion__title {
+        font-size: 38px;
+    }
+
+    .promotion__description {
+        font-size: 15px;
+    }
+
+    .promotion__price {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .promotion__new-price {
+        font-size: 37px;
+    }
+
+    .master-preview__image {
+        height: 440px;
+    }
+
+    .master-preview__info {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .master-preview__experience {
+        text-align: left;
+    }
+
+    .review-card {
+        min-height: 360px;
+        padding: 28px 22px;
+    }
+
+    .review-card__text {
+        font-size: 18px;
+    }
+
+    .review-card__author {
+        right: 22px;
+        left: 22px;
+    }
+
+    .final-cta {
+        min-height: 500px;
+    }
+
+    .final-cta__container {
+        min-height: 500px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .final-cta__title {
+        font-size: clamp(38px, 12vw, 55px);
+    }
+
+    .final-cta__description {
+        font-size: 15px;
+    }
+
+    .footer {
+        padding-top: 58px;
+    }
+
+    .footer__top {
+        gap: 36px;
+    }
+
+    .page-hero {
+        min-height: 390px;
+        padding-top: 120px;
+        padding-bottom: 52px;
+    }
+
+    .page-hero__title {
+        font-size: clamp(42px, 13vw, 60px);
+    }
+
+    .page-hero__description {
+        font-size: 15px;
+    }
+
+    .breadcrumbs {
+        font-size: 10px;
+    }
+
+    .services-filter {
+        gap: 8px;
+    }
+
+    .filter-button {
+        flex: 1 1 calc(50% - 8px);
+        padding-inline: 12px;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .service-card__title {
+        font-size: 24px;
+    }
+
+    .service-card__meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .price-table th,
+    .price-table td {
+        padding: 17px 16px;
+    }
+
+    .master-card__image {
+        height: 470px;
+    }
+
+    .master-card__content {
+        padding: 24px 22px;
+    }
+
+    .master-card__name {
+        padding-right: 55px;
+        font-size: 24px;
+    }
+
+    .master-modal__close {
+        top: 10px;
+        right: 10px;
+    }
+
+    .master-modal__photo {
+        min-height: 350px;
+    }
+
+    .master-modal__info {
+        padding: 34px 22px 38px;
+    }
+
+    .master-modal__name {
+        padding-right: 20px;
+        font-size: 34px;
+    }
+
+    .master-modal__details li {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .master-modal__details strong {
+        text-align: left;
+    }
+
+    .master-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .master-gallery img {
+        height: 120px;
+    }
+
+    .booking {
+        padding: 30px 20px;
+    }
+
+    .booking__title {
+        font-size: 34px;
+    }
+
+    .contact-card {
+        padding: 24px 20px;
+    }
+
+    .contact-card__value,
+    .contact-card a {
+        font-size: 21px;
+    }
+
+    .schedule-list li {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .map-container {
+        height: 380px;
+    }
+}
+
+
+/* =========================================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ — ДО 380px
+   ========================================================= */
+
+@media (max-width: 380px) {
+    .container {
+        width: min(100% - 18px, 360px);
+    }
+
+    .logo__text {
+        display: none;
+    }
+
+    .hero__title {
+        font-size: 39px;
+    }
+
+    .hero__buttons {
+        max-width: 100%;
+    }
+
+    .hero-fact {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .hero-fact__number {
+        min-width: 0;
+    }
+
+    .section-title {
+        font-size: 33px;
+    }
+
+    .service-preview {
+        min-height: 350px;
+    }
+
+    .promotion__title {
+        font-size: 34px;
+    }
+
+    .master-preview__image,
+    .master-card__image {
+        height: 400px;
+    }
+
+    .review-card {
+        min-height: 390px;
+    }
+
+    .filter-button {
+        flex-basis: 100%;
+    }
+
+    .master-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .master-gallery img {
+        height: 180px;
+    }
+}
+
+
+/* =========================================================
+   ШИРОКИЕ ЭКРАНЫ — ОТ 1600px
+   ========================================================= */
+
+@media (min-width: 1600px) {
+    :root {
+        --container-width: 1440px;
+    }
+
+    .hero__title {
+        font-size: 118px;
+    }
+
+    .hero__description {
+        font-size: 19px;
+    }
+
+    .service-preview {
+        min-height: 580px;
+    }
+
+    .work-card {
+        height: 560px;
+    }
+
+    .master-preview__image {
+        height: 560px;
+    }
+}
+
+
+/* =========================================================
+   ГОРИЗОНТАЛЬНАЯ ОРИЕНТАЦИЯ МОБИЛЬНЫХ
+   ========================================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: 700px;
+    }
+
+    .navigation {
+        padding-top: 70px;
+    }
+
+    .navigation__link {
+        padding: 14px 0;
+        font-size: 19px;
+    }
+
+    .navigation__mobile-info {
+        margin-top: 24px;
+        padding-top: 18px;
+    }
+
+    .master-modal {
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   УСТРОЙСТВА БЕЗ HOVER
+   ========================================================= */
+
+@media (hover: none) {
+    .service-preview__image img,
+    .work-card img,
+    .master-preview__image img,
+    .master-card__image img {
+        filter: grayscale(0.25) contrast(1.04);
+    }
+
+    .work-card__overlay {
+        transform: translateY(0);
+    }
+
+    .advantage-card:hover,
+    .review-card:hover,
+    .service-card:hover {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   ОТКЛЮЧЕНИЕ ВИДЕО ПРИ ЭКОНОМИИ ТРАФИКА
+   ========================================================= */
+
+@media (prefers-reduced-data: reduce) {
+    .hero__video {
+        display: none;
+    }
+
+    .hero {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.94),
+                rgba(0, 0, 0, 0.58)
+            ),
+            url("../images/backgrounds/hero-poster.jpg") center / cover no-repeat;
+    }
+}
