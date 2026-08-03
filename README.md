@@ -1,7 +1,7 @@
 # 💈 Барбершоп «ТОПОР»
 
 <p align="center">
-  <img src="assets/banner.png" alt="Барбершоп ТОПОР" width="100%">
+  <img src="barbershop-topor/assets/banner.png" alt="Барбершоп ТОПОР" width="100%">
 </p>
 
 ## 📖 О проекте
