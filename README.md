@@ -1,37 +1,33 @@
-# 💈 TOPOR Barbershop
+# 💈 Барбершоп «ТОПОР»
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/q1271qaz-arch/barbershop-topor/main/assets/banner.png" alt="TOPOR Barbershop" width="100%">
+  <img src="assets/banner.png" alt="Барбершоп ТОПОР" width="100%">
 </p>
 
-## 📖 About
+## 📖 О проекте
 
-**TOPOR Barbershop** is a modern responsive website for a premium barbershop.
+**«ТОПОР»** — современный многостраничный сайт барбершопа, разработанный с акцентом на удобство пользователей, высокую скорость загрузки и современный дизайн.
 
-The project was created as a commercial landing page with a strong focus on design, usability and conversion.
-
-The website includes service pages, masters gallery, online booking, contact page and SEO optimization.
+Проект включает в себя главную страницу, разделы с услугами, мастерами, галереей работ и контактами, а также форму онлайн-записи.
 
 ---
 
-# ✨ Features
+# ✨ Возможности
 
-- Responsive design
-- Modern UI/UX
-- Premium landing page
-- Services catalog
-- Masters gallery
-- Portfolio section
-- Interactive animations
-- Online booking form
-- Google Maps integration
-- SEO friendly
-- Sitemap
-- Robots.txt
+- 💈 современный адаптивный дизайн;
+- 📱 корректное отображение на мобильных устройствах;
+- 👨‍🔧 страница с мастерами;
+- 💰 каталог услуг и цен;
+- 🖼️ галерея выполненных работ;
+- 📝 форма онлайн-записи;
+- 📍 интеграция с картой;
+- ⚡ плавные анимации;
+- 🔍 SEO-оптимизация;
+- 🤖 файлы `robots.txt` и `sitemap.xml`.
 
 ---
 
-# 🛠 Tech Stack
+# 🛠 Используемые технологии
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
@@ -39,17 +35,15 @@ The website includes service pages, masters gallery, online booking, contact pag
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-![AOS](https://img.shields.io/badge/AOS-Animation-blue?style=for-the-badge)
+![AOS](https://img.shields.io/badge/AOS-Анимации-blue?style=for-the-badge)
 
-![Swiper](https://img.shields.io/badge/Swiper-Slider-6332F6?style=for-the-badge)
+![Swiper](https://img.shields.io/badge/Swiper-Слайдер-6332F6?style=for-the-badge)
 
-![EmailJS](https://img.shields.io/badge/EmailJS-FFB400?style=for-the-badge)
-
-![Google Maps](https://img.shields.io/badge/Google%20Maps-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)
+![EmailJS](https://img.shields.io/badge/EmailJS-Форма_заявки-FFB400?style=for-the-badge)
 
 ---
 
-# 📂 Project Structure
+# 📂 Структура проекта
 
 ```
 barbershop-topor
@@ -59,50 +53,59 @@ barbershop-topor
 ├── images
 ├── fonts
 ├── contacts.html
-├── services.html
 ├── masters.html
+├── services.html
 ├── index.html
-├── sitemap.xml
 ├── robots.txt
+├── sitemap.xml
 └── favicon.ico
 ```
 
 ---
 
-# 🚀 Installation
+# 🚀 Как запустить проект
 
-Clone the repository
+1. Клонировать репозиторий:
 
 ```bash
 git clone https://github.com/q1271qaz-arch/barbershop-topor.git
 ```
 
-Open the project in VS Code.
+2. Открыть проект в **Visual Studio Code**.
 
-Install **Live Server** extension.
+3. Установить расширение **Live Server**.
 
-Run:
+4. Открыть файл `index.html`.
 
-```
-Open index.html → Open with Live Server
-```
+5. Нажать **Open with Live Server**.
 
 ---
 
-# 📸 Preview
+# 📸 Скриншоты
 
-> Screenshots will be added soon.
-
----
-
-# 👩‍💻 Author
-
-**Tatiana**
-
-GitHub:
-
-https://github.com/q1271qaz-arch
+Скриншоты проекта будут добавлены позже.
 
 ---
 
-⭐ If you like this project, don't forget to leave a Star.
+# 📌 Основные возможности сайта
+
+- Главная страница
+- Услуги
+- Прайс-лист
+- Карточки мастеров
+- Галерея работ
+- Онлайн-запись
+- Контактная информация
+- SEO-настройка
+
+---
+
+# 👩‍💻 Автор
+
+**Татьяна**
+
+GitHub: https://github.com/q1271qaz-arch
+
+---
+
+⭐ Спасибо за просмотр проекта!
